@@ -8,5 +8,6 @@ class MovieViewSet(viewsets.ModelViewSet):
     """
     This viewset automatically provides `list` and `detail` actions.
     """
+
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
