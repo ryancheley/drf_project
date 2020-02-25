@@ -38,8 +38,8 @@ test:
   script:
     - pytest -p no:warnings --cov=.
     - flake8 .
-    - black --check --exclude=migrations .
-    - isort ./*/*.py --check-only
+    - black .
+    - isort ./*/*.py
 
 deploy:
   stage: deploy
