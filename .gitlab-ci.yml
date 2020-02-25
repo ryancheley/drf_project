@@ -30,9 +30,9 @@ test:
   services:
     - postgres:latest
   variables:
-    POSTGRES_DB: user
-    POSTGRES_USER: password
-    POSTGRES_PASSWORD: ""
+    POSTGRES_DB: movies_dev
+    POSTGRES_USER: movies
+    POSTGRES_PASSWORD: "movies"
     DATABASE_URL: postgres://kpysryynuaqkhp:0b374110dbda0486fc717de309e1abceedbe4d288a1aa11075268ab13e3482f4@ec2-3-230-106-126.compute-1.amazonaws.com:5432/dagogqpkv1fdfb
   script:
     - pytest -p no:warnings --cov=.
