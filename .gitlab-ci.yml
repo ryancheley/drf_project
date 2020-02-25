@@ -32,7 +32,7 @@ test:
   variables:
     POSTGRES_DB: users
     POSTGRES_USER: runner
-    POSTGRES_PASSWORD: ""
+    POSTGRES_PASSWORD: "password"
     DATABASE_URL: postgres://runner@postgres:5432/users
   script:
     - pytest -p no:warnings --cov=.
