@@ -40,10 +40,13 @@ test:
     - source env/bin/activate
     - pip install -r requirements.txt
     - pip install black flake8 isort pytest pytest-django
+    - export DEBUG=1
     - pytest -p no:warnings
     - flake8 .
     - black --check --exclude="migrations|env" .
     - isort ./*/*.py --check-only
+    - export DEBUG=0
+    - python manage.py check --deploy --fail-level=WARNING
 
 deploy:
   stage: deploy
