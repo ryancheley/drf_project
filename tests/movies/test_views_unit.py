@@ -3,7 +3,7 @@
 import pytest
 from django.http import Http404
 
-from movies.views import MovieSerializer, MovieViewSet, Movie
+from movies.views import MovieSerializer, MovieViewSet
 
 
 def test_add_movie(client, monkeypatch):
