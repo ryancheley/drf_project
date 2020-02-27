@@ -34,7 +34,7 @@ def test_add_movie_invalid_json_keys(client):
 
     resp = client.post(
         "/api/movies/",
-        {"title": "The Big Lebowski", "genre": "comedy", },
+        {"title": "The Big Lebowski", "genre": "comedy",},
         content_type="application/json",
     )
     assert resp.status_code == 400

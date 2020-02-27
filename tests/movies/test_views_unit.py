@@ -67,8 +67,8 @@ def test_get_single_movie_incorrect_id(client):
 #
 #     resp = client.get(f"/api/movies/")
 #     assert resp.status_code == 200
-    # assert resp.data[0]["title"] == payload[0].get("title")
-    # assert resp.data[1]["title"] == payload[1]["title"]
+# assert resp.data[0]["title"] == payload[0].get("title")
+# assert resp.data[1]["title"] == payload[1]["title"]
 
 
 def test_remove_movie(client, monkeypatch):
