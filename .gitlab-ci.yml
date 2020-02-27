@@ -32,14 +32,18 @@ test:
   variables:
     POSTGRES_DB: users
     POSTGRES_USER: runner
-    POSTGRES_HOST_AUTH_METHOD: "trust"
     POSTGRES_PASSWORD: ""
     DATABASE_URL: postgres://runner@postgres:5432/users
   script:
-    - pytest -p no:warnings --cov=.
+    - cd app
+    - python3.8 -m venv env
+    - source env/bin/activate
+    - pip install -r requirements.txt
+    - pip install black flake8 isort pytest pytest-django
+    - pytest -p no:warnings
     - flake8 .
-    - black .
-    - isort ./*/*.py
+    - black --check --exclude="migrations|env" .
+    - isort ./*/*.py --check-only
 
 deploy:
   stage: deploy
