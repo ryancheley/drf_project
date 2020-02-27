@@ -35,7 +35,6 @@ test:
     POSTGRES_PASSWORD: ""
     DATABASE_URL: postgres://runner@postgres:5432/users
   script:
-    - cd app
     - python3.8 -m venv env
     - source env/bin/activate
     - pip install -r requirements.txt
