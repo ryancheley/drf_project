@@ -10,7 +10,7 @@ def test_add_movie(client):
 
     resp = client.post(
         "/api/movies/",
-        {"title": "The Big Lebowski", "genre": "comedy", "year": "1998", },
+        {"title": "The Big Lebowski", "genre": "comedy", "year": "1998"},
         content_type="application/json",
     )
     assert resp.status_code == 201

@@ -1,9 +1,9 @@
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework import viewsets
 
 from .models import Movie
 from .serializers import MovieSerializer
-from drf_yasg import openapi
-from drf_yasg.utils import swagger_auto_schema
 
 
 @swagger_auto_schema(
