@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third Party Apps
     "rest_framework",
+    "drf_yasg",
     # Local Apps
     "movies",
 ]
@@ -152,3 +153,7 @@ if not DEBUG:
     REST_FRAMEWORK = {
         "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",)
     }
+
+SWAGGER_SETTINGS = {
+    "USE_SESSION_AUTH": False
+}
